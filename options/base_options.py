@@ -151,8 +151,8 @@ class BaseTrainOptions():
         """Define the common options that are used in both training and test."""
         # basic parameters
         parser.add_argument('--dataroot', help='path to images (should have subfolders trainA, trainB, valA, valB, etc)', metavar="/combinelab/03_user/yejin/01_project/epilepsy_HS_FCD/02_lesion_synthesis/03_input_T1/datasets_left_nonmask_sag/lesion/", default="/combinelab/03_user/yejin/01_project/epilepsy_HS_FCD/02_lesion_synthesis/03_input_3D/01_datasets_3d_left/lesion/")
-        parser.add_argument('--name', type=str, default='test_cpu', help='name of the experiment. It decides where to store samples and models', metavar="lesionregion_testing")
-        parser.add_argument('--gpu_ids', type=str, default='-1', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
+        parser.add_argument('--name', type=str, default='test_skku', help='name of the experiment. It decides where to store samples and models', metavar="lesionregion_testing")
+        parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
         parser.add_argument('--checkpoints_dir', type=str, default='/combinelab/03_user/yejin/01_project/epilepsy_HS_FCD/02_lesion_synthesis/04_results_3D/results/checkpoints', help='models are saved here')
         # model parameters
         parser.add_argument('--model', type=str, default='agan_foreground', help='chooses which model to use. [cycle_gan | pix2pix | test | colorization]')
